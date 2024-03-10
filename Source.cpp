@@ -66,17 +66,17 @@ int main() {
 
 	//завдання2
 
-FILE* file1, * file2;
-file1 = fopen("D:\\Valeria\\file.txt", "r");
-file2 = fopen("D:\\Valeria\\file2.txt", "w");
-
-char file[100][100];
-int c = Count(file1);
-
-FullMasive(file1, file, c);
-FullFile2(file2, file, c);
-
-fclose(file1);
-fclose(file2); 
+////FILE* file1, * file2;
+////file1 = fopen("D:\\Valeria\\file.txt", "r");
+////file2 = fopen("D:\\Valeria\\file2.txt", "w");
+////
+////char file[100][100];
+////int c = Count(file1);
+////
+////FullMasive(file1, file, c);
+////FullFile2(file2, file, c);
+////
+////fclose(file1);
+////fclose(file2); 
 
 }
