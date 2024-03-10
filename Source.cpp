@@ -34,20 +34,20 @@ void FullFile(FILE* file1, FILE* file2, int c, char line[]) {
 int main() {
 	//завдання1
 
-FILE* file1, * file2;
-
-file1 = fopen("D:\\Valeria\\file.txt", "r");
-file2 = fopen("D:\\Valeria\\file2.txt", "w");
-
-char line[100];
-int c;
-
-
-c = Count(file1);
-
-FullFile(file1, file2, c, line);
-
-fclose(file1);
-fclose(file2); 
+//FILE* file1, * file2;
+//
+//file1 = fopen("D:\\Valeria\\file.txt", "r");
+//file2 = fopen("D:\\Valeria\\file2.txt", "w");
+//
+//char line[100];
+//int c;
+//
+//
+//c = Count(file1);
+//
+//FullFile(file1, file2, c, line);
+//
+//fclose(file1);
+//fclose(file2); 
 
 }
