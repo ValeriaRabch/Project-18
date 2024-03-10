@@ -31,6 +31,13 @@ void FullFile(FILE* file1, FILE* file2, int c, char line[]) {
 	}
 }
 
+void  FullMasive(FILE* file1, char file[][100], int c) {
+	for (int i = 0; c != -1; i++) {
+		fgets(file[i], 100, file1);
+		c--;
+	}
+}
+
 int main() {
 	//завдання1
 
@@ -57,6 +64,10 @@ FILE* file1, * file2;
 file1 = fopen("D:\\Valeria\\file.txt", "r");
 file2 = fopen("D:\\Valeria\\file2.txt", "w");
 
+char file[100][100];
+int c = Count(file1);
+
+FullMasive(file1, file, c);
 
 fclose(file1);
 fclose(file2); 
