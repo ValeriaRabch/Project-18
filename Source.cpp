@@ -44,6 +44,18 @@ void FullFile2(FILE* file2, char file[][100], int c) {
 	}
 }
 
+int Audit(char filem[][100], int c, char line) {
+	for (int i = c - 1; i >= 0; i--) {
+		for (int j = 0; filem[i][j] != '\0'; j++) {
+			if (filem[i][j] == line) {
+				return i;
+			}
+		}
+	}
+	return c - 1;
+}
+
+
 int main() {
 	//завдання1
 
@@ -85,6 +97,11 @@ int main() {
 	file1 = fopen("D:\\Valeria\\file.txt", "r");
 	file2 = fopen("D:\\Valeria\\file2.txt", "w");
 
+	char filem[100][100], c = Count(file1);
+
+	FullMasive(file1, filem, c);
+	int index = Audit(filem, c, ' ');
+
 	fclose(file1);
-	fclose(file2)
+	fclose(file2);
 }
