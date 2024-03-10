@@ -55,6 +55,24 @@ int Audit(char filem[][100], int c, char line) {
 	return c - 1;
 }
 
+void FullFile2(FILE* file2, char file[][100], int c, int index) {
+	int r = 12;
+	for (int i = 0; i < c; i++) {
+		if (i == index) {
+			for (int j = 0; r != 0; j++) {
+				if (file[i][j] == '\n') {
+					while (r != 0) {
+						file[i][j] = '-';
+						r--; j++;
+					}
+					file[i][j] = '\n';
+					file[i][j + 1] = '\0';
+				}
+			}
+		}
+		fprintf(file2, file[i]);
+	}
+}
 
 int main() {
 	//завдання1
@@ -101,6 +119,7 @@ int main() {
 
 	FullMasive(file1, filem, c);
 	int index = Audit(filem, c, ' ');
+	FullFile2(file2, filem, c, index);
 
 	fclose(file1);
 	fclose(file2);
