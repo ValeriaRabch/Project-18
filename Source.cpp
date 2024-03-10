@@ -38,6 +38,12 @@ void  FullMasive(FILE* file1, char file[][100], int c) {
 	}
 }
 
+void FullFile2(FILE* file2, char file[][100], int c) {
+	for (int i = c - 1; i != -1; i--) {
+		fprintf(file2, file[i]);
+	}
+}
+
 int main() {
 	//завдання1
 
@@ -68,6 +74,7 @@ char file[100][100];
 int c = Count(file1);
 
 FullMasive(file1, file, c);
+FullFile2(file2, file, c);
 
 fclose(file1);
 fclose(file2); 
