@@ -16,6 +16,21 @@ int Count(FILE* f) {
 	return count;
 }
 
+void FullFile(FILE* file1, FILE* file2, int c, char line[]) {
+	int count = 0;
+	while (c != 0) {
+		fgets(line, 200, file1);
+		for (int i = 0; line[i] != '\0'; i++) {
+			count++;
+		}
+		if (count - 1 >= 7) {
+			fprintf(file2, line);
+		}
+		count = 0;
+		c--;
+	}
+}
+
 int main() {
 	//завдання1
 
@@ -29,6 +44,8 @@ int c;
 
 
 c = Count(file1);
+
+FullFile(file1, file2, c, line);
 
 fclose(file1);
 fclose(file2); 
